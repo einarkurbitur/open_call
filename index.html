@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+	<style>
+		html,
+		body {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			font-family: 'Roboto Mono', sans-serif;
+		}
+
+		.container {
+			width: 60%;
+			margin-left: 20%;
+			margin-bottom: 5%;
+			background-color: white;
+			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.header-container {
+			width: 60%;
+			margin-left: 20%;
+			margin-bottom: 5%;
+			background-color: white;
+			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.image {
+			width: 80%;
+		}
+
+		.text {
+			font-size: 14px;
+			width: 80%;
+			padding-top: 10px;
+			padding-bottom: 25px;
+		}
+
+		.header-text {
+			width: 80%;
+			padding: 10px;
+		}
+
+		.project-by {
+			font-size: 10px;
+		}
+
+		.gallery {
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+		}
+
+		.gallery_item {
+			width: 40%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	</style>
+
+	<title>Photoshop Action Open Call</title>
+</head>
+
+<body>
+	<div class="header-container">
+		<h1> Photoshop Action Open Call</h1>
+		<p1 class="header-text" id="intro">This is an open call for all artists and non-artists to participate in the creation of Photoshop Actions. If you want to participate, please upload your .atn file down below. If you want to know how to make an action press the instructions button</p1>
+		<div class="" style="display: flex; justify-content: flex-start; margin-bottom: 20px;">
+			<form enctype="multipart/form-data" action="upload.php" method="POST">
+				<input type="file" name="uploaded_file"></input><br />
+				<input type="submit" value="Upload"></input>
+			</form>
+			<div class="">
+				<button type="button" name="button" onclick="location.href='tutorial.html'" style="">Instructions</button>
+			</div>
+			<div class="">
+				<button type="button" name="button" onclick="location.href='tutorial.html'" style="">Index of all actions</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h2> Gallery</h2>
+		<div class="gallery">
+
+			<div class="gallery_item">
+				<image src="gifs/Arcangel.gif" class="image">
+					<p class="text"><a href="actions/Arcangel.atn" download>&#8595;</a> Arcangel <br>by Florian van Zandwijk</p>
+			</div>
+
+			<div class="gallery_item">
+				<image src="gifs/mosaic.gif" class="image">
+					<p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac <br>by Einar Andersen</p>
+			</div>
+
+			<div class="gallery_item">
+				<image src="gifs/Arcangel.gif" class="image">
+					<p class="text"><a href="actions/Arcangel.atn" download>&#8595;</a> Arcangel <br>by Florian van Zandwijk</p>
+			</div>
+
+			<div class="gallery_item">
+				<image src="gifs/mosaic.gif" class="image">
+					<p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac <br>by Einar Andersen</p>
+			</div>
+
+			<div class="gallery_item">
+				<image src="gifs/Arcangel.gif" class="image">
+					<p class="text"><a href="actions/Arcangel.atn" download>&#8595;</a> Arcangel <br>by Florian van Zandwijk</p>
+			</div>
+
+			<div class="gallery_item">
+				<image src="gifs/mosaic.gif" class="image">
+					<p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac <br>by Einar Andersen</p>
+			</div>
+		</div>
+		<p1 class="project-by">project by: Einar Andersen and Florian van Zandwijk</p1>
+
+	</div>
+
+</body>
+
+</html>
+<?PHP
+  if(!empty($_FILES['uploaded_file']))
+  {
+    $path = "uploads/";
+    $path = $path . basename( $_FILES['uploaded_file']['name']);
+
+    if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $path)) {
+      echo "The file ".  basename( $_FILES['uploaded_file']['name']).
+      " has been uploaded";
+    } else{
+        echo "There was an error uploading the file, please try again!";
+    }
+  }
+?>
