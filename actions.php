@@ -29,7 +29,7 @@
 		.header-container {
 			width: 60%;
 			margin-left: 20%;
-			margin-bottom: 5%;
+			margin-bottom: 2%;
 			background-color: white;
 			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
 			display: flex;
@@ -84,10 +84,6 @@
 		<h1> Photoshop Action Open Call</h1>
 		<p1 class="header-text" id="intro">Here is a index of all the actions that users have submitted.</p1>
 		<div class="" style="width: 80%; display: flex; justify-content: space-between; margin-bottom: 20px;">
-			<!-- <form enctype="multipart/form-data" action="upload.php" method="POST">
-				<input type="file" name="uploaded_file"></input><br />
-				<input type="submit" value="Upload"></input>
-			</form> -->
 			<div class="">
 				<button type="button" name="button" onclick="location.href='tutorial.html'" style="">Instructions</button>
 			</div>
