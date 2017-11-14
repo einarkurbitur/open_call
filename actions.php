@@ -57,22 +57,23 @@
 			font-size: 10px;
 		}
 
-		.gallery {
+		.action_list{
+      width: 80%;
 			align-items: center;
 			justify-content: center;
 			display: flex;
-			flex-direction: row;
-			align-items: center;
+			flex-direction: column;
+			align-items: flex-start;
 			flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
 		}
 
-		.gallery_item {
+		/*.gallery_item {
 			width: 40%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-		}
+		}*/
 	</style>
 
 	<title>Photoshop Action Open Call</title>
@@ -81,35 +82,34 @@
 <body>
 	<div class="header-container">
 		<h1> Photoshop Action Open Call</h1>
-		<p1 class="header-text" id="intro">This is an open call for all artists and non-artists to participate in the creation of Photoshop Actions. If you want to participate, please upload your .atn file down below. If you want to know how to make an action press the instructions button</p1>
+		<p1 class="header-text" id="intro">Here is a index of all the actions that users have submitted.</p1>
 		<div class="" style="width: 80%; display: flex; justify-content: space-between; margin-bottom: 20px;">
-			<form enctype="multipart/form-data" action="upload.php" method="POST">
+			<!-- <form enctype="multipart/form-data" action="upload.php" method="POST">
 				<input type="file" name="uploaded_file"></input><br />
 				<input type="submit" value="Upload"></input>
-			</form>
+			</form> -->
 			<div class="">
 				<button type="button" name="button" onclick="location.href='tutorial.html'" style="">Instructions</button>
 			</div>
 			<div class="">
-				<button type="button" name="button" onclick="location.href='actions.php'" style="">Index of all actions</button>
+				<button type="button" name="button" onclick="location.href='index.html'" style="">Main page</button>
 			</div>
 		</div>
 	</div>
 
 	<div class="container">
-		<h2> Gallery</h2>
-		<div class="gallery">
-
-			<div class="gallery_item">
-				<image src="gifs/Arcangel.gif" class="image">
-					<p class="text"><a href="actions/Arcangel.atn" download>&#8595;</a> Arcangel <br>by Florian van Zandwijk</p>
-			</div>
-
-			<div class="gallery_item">
-				<image src="gifs/mosaic.gif" class="image">
-					<p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac <br>by Einar Andersen</p>
-			</div>
+		<h2>Index of Actions</h2>
+		<div class="action_list">
+	    <?php
+	    $files = array_slice(scandir('./uploads'),2);
+	    sort($files); // this does the sorting
+	    foreach($files as $file){
+	      echo'<p><a href="uploads/'.$file.'"download>&#8595;</a> '.$file.'</p>';
+	    }
+			?>
 		</div>
+
+
 		<p1 class="project-by">project by: Einar Andersen and Florian van Zandwijk</p1>
 
 	</div>
@@ -117,17 +117,3 @@
 </body>
 
 </html>
-<?PHP
-  if(!empty($_FILES['uploaded_file']))
-  {
-    $path = "uploads/";
-    $path = $path . basename( $_FILES['uploaded_file']['name']);
-
-    if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $path)) {
-      echo "The file ".  basename( $_FILES['uploaded_file']['name']).
-      " has been uploaded";
-    } else{
-        echo "There was an error uploading the file, please try again!";
-    }
-  }
-?>
