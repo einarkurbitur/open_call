@@ -24,6 +24,8 @@
       align-items: center;
       padding-top: 20px;
       padding-bottom: 20px;
+      /*flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;*/
     }
 
     .header-container {
@@ -56,6 +58,22 @@
     .project-by {
       font-size: 10px;
     }
+    .gallery{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+
+    }
+    .gallery_item{
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   </style>
 
   <title>Photoshop Action Open Call</title>
@@ -70,11 +88,47 @@
 
   <div class="container">
     <h2> Gallery</h2>
+    <div class="gallery">
 
-    <image src="gifs/Arcangel.gif" class="image">
-      <p class="text"><a href="actions/Arcangel.atn" download>&#8595;</a> Arcangel by Florian van Zandwijk</p>
+    <div class="gallery_item">
+      <image src="gifs/Arcangel.gif" class="image">
+        <p class="text"><a href="actions/Arcangel.atn" download>&#8595;</a> Arcangel by Florian van Zandwijk</p>
+    </div>
+
+    <div class="gallery_item">
       <image src="gifs/mosaic.gif" class="image">
         <p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac by Einar Andersen</p>
+    </div>
+
+    <div class="gallery_item">
+      <image src="gifs/Arcangel.gif" class="image">
+        <p class="text"><a href="actions/Arcangel.atn" download>&#8595;</a> Arcangel by Florian van Zandwijk</p>
+    </div>
+
+    <div class="gallery_item">
+      <image src="gifs/mosaic.gif" class="image">
+        <p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac by Einar Andersen</p>
+    </div>
+    <div class="gallery_item">
+      <image src="gifs/mosaic.gif" class="image">
+        <p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac by Einar Andersen</p>
+    </div>
+    <div class="gallery_item">
+      <image src="gifs/mosaic.gif" class="image">
+        <p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac by Einar Andersen</p>
+    </div>
+    <div class="gallery_item">
+      <image src="gifs/mosaic.gif" class="image">
+        <p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac by Einar Andersen</p>
+    </div>
+    <div class="gallery_item">
+      <image src="gifs/mosaic.gif" class="image">
+        <p class="text"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac by Einar Andersen</p>
+    </div>
+  </div>
+
+
+
     <p1 class="project-by">project by: Einar Andersen and Florian van Zandwijk</p1>
 
   </div>
