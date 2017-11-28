@@ -52,7 +52,7 @@ body {
       ?> </a>
       </form>
 		</div>
-    <button type="button" name="button" onclick="location.href='index_actions.html'" style="margin: 20px;">Go Back</button>
+    <button type="button" name="button" onclick="location.href='index.html'" style="margin: 20px;">Go Back</button>
 
 	</div>
 

@@ -6,7 +6,8 @@ body
     display: flex;
     flex-direction: column;
 
-    width: 100%;
+
+/*    width: 100%;*/
 
     justify-content: center;
 }
@@ -14,13 +15,15 @@ a{
     font-size: 30px;
     width: 80%;
     text-decoration: none;
-    color: red;
+    color: blue;
 }
 a .image{
   width: 100%;
 }
 button{
   border-style: outset;
+  background-color: blue;
+  color: white;
 
 }
 
@@ -61,11 +64,14 @@ button{
 .image
 {
     width: 80%;
+
 }
 
 .text
 {
     font-size: 14px;
+        display: flex;
+    flex-direction: column;
 
     width: 80%;
     padding-top: 10px;
@@ -105,18 +111,34 @@ button{
 
     align-items: center;
 }
+
+.howtorun {
+/*        display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+            flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;*/
+
+}
+
 .gallery_title{
   width: 80%;
+  color: blue;
 }
 
 .submission_box
-{
+{   
+    background-color: blue;
+    color: white;
     position: fixed;
     top: 9px;
     right: 10px;
 
     width: 200px;
-    height: 80px;
+    height: 100px;
     padding: 20px;
 
     border-style: outset;
@@ -127,6 +149,7 @@ button{
     flex-direction: column;
 
     width: 80%;
+    color: blue;
 
     align-items: center;
     justify-content: center;
