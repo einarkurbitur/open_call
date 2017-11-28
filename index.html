@@ -2,82 +2,77 @@
 <html>
 
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>PS Action Club</title>
 </head>
 
 <body>
 	<div class="submission_box">
-		<p1>SUBMIT YOUR ACTION</p1>
+		<!-- <p1>SUBMIT YOUR ACTION</p1> -->
 		<form enctype="multipart/form-data" action="upload.php" method="POST">
-			<input type="file" name="uploaded_file"></input><br />
+			<input type="file" name="uploaded_file" id="file_upload"></input>
+			<label for="file_upload" class="uploader">Select your file</label>
 			<input type="submit" value="Upload"></input>
 		</form>
 	</div>
+	<div class="navigation">
+      <div class="">
+        <button type="button" name="button" onclick="location.href='index.html'" style="">Home</button>
+      </div>
+
+      <div class="">
+        <button type="button" name="button" onclick="location.href='gallery.html'" style="">Gallery</button>
+      </div>
+
+			<div class="">
+				<button type="button" name="button" onclick="location.href='tutorial.html'" style="">How to create an action</button>
+			</div>
+  </div>
 
 	<div class="header-container">
-		<h1> PS Action Club Open Call</h1>
-		<p1 class="header-text">This is an open call for all artists and non-artists to create Photoshop Actions. Download and open an action from the gallery down below to see how it works.
-		<br><br>
-
-		Go to instructions to see how it to upload your action file. In the gallery you can see a preview of our favorite actions and download and run them.</p1>
-		<div class="" style="width: 36%; display: flex; justify-content: space-between; margin-bottom: 20px;">
-			<div class="">
-				<button type="button" name="button" onclick="location.href='index.html'" style="">Main page</button>
-			</div>
-			<div class="">
-				<button type="button" name="button" onclick="location.href='tutorial.html'" style="">Instructions</button>
-			</div>
-			<div class="">
-				<button type="button" name="button" onclick="location.href='actions.php'" style="">Index of all actions</button>
-			</div>
-		</div>
-	</div>
-
-
-		<div class="container">
-	<h2>How to run</h2>
-		<div class="gallery">
-			
-
-			<p class="text">Open the action from your downloads. Photoshop will launch. open the action menu via Window-->Actions</p>
-
-			    <image src="images/playback.png" class="image">
-      <p1 class="text">To change the playback speed, press the button in the top right corner of the action window and select "Playback Options...". From there you can choose to either play it step by step or instantaneous.
-<br><br>      
-      This way the work will be shown step by step.
-<br><br>      
-      Press play and enjoy! </p1>
-		</div>
+		<h1>What is the PS Action Club?</h1>
+		<p class="header-text">Throughout history artists have been recording their hand and mind through their work. Pablo Picasso was filmed by Belgian director Paul Haesaerts while painting on glass in 1949. The glass painting registered the way the hand of the master produced
+			his signature paintings.
+			<br><br> Sol LeWitt created written set of instructions between 1969 and 2007. These instructions were never executed by LeWitt himself. This way every execution and interpretations of the written instructions will be different.
+			<br><br> One year after LeWitt died and thereby ended his series of written instructions, another American artist named Cory Arcangel created a series of Photoshop Gradient works. The title of the Gradients was the Photoshop instruction that would execute
+			the work.
+			<br><br> The PS Action Club is a platform that collects Photoshop Action files. These files are a set of Photoshop instructions that can be run via this program. The action will one by one play out in front of your eyes. This way the hand of the artist
+			is formed inside the Photoshop action.
+			<br><br>
+		</p>
 
 	</div>
+
+
+
 
 	<div class="container">
 		<h2> Gallery</h2>
-		<div class="gallery">
-
-			<div class="gallery_item">
-					<a href="actions/Arcangel.atn" download>
-						<image src="gifs/Arcangel.gif" class="image">
-					</a>
-					<p class="gallery_title"><a href="actions/Arcangel.atn" download>&#8595;</a> Arcangel <br>by Florian van Zandwijk</p>
-			</div>
-
-			<div class="gallery_item">
 				<a href="actions/Mosiac.atn" download>
 					<image src="gifs/mosaic.gif" class="image">
-					</a>
-					<p class="gallery_title"><a href="actions/Mosiac.atn" download>&#8595;</a> Mosiac <br>by Einar Andersen</p>
-			</div>
-
-		</div>
+				</a>
+				<p class="gallery_title"><a href="actions.php" style="font-size: 14px;">See more examples</a></p>
 
 
-		<p1 class="project-by">project by: Einar Andersen and Florian van Zandwijk</p1>
+
+
 
 	</div>
-
+	<div class="container">
+		<h2>How to view an action in Photoshop</h2>
+		<div class="gallery">
+			<image src="images/how_to.png" class="image">
+			<p class="text">1. Download the action you want to view</p>
+			<p class="text">2. Double click on the action to open it in photoshop</p>
+			<image src="images/find_action.png" class="image">
+			<p class="text">3. Open up the action window by going to Window -> Actions</p>
+			<image src="images/playback.png" class="image">
+			<p class="text">To change the playback speed, press the button in the top right corner of the action window and select "Playback Options...". From there choose step by step.</p>
+			<p class="text">Press play and enjoy</p>
+		</div>
+		<p1 class="project-by">project by: Einar Andersen and Florian van Zandwijk</p1>
+	</div>
 
 
 
