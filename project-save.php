@@ -2,7 +2,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
 
-<?
+<?php
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -32,14 +32,14 @@ include 'db.php';
 
 
 <div class="header-container">
-<?
+<?php
 // phpInfo();
 
- $target = "media/"; 
- $target = $target . basename( $_FILES['file']['name']); 
+ $target = "media/";
+ $target = $target . basename($_FILES['file']['name']);
 
 
-$action=($_FILES['file']['name']); 
+$action=($_FILES['file']['name']);
 
 
 
@@ -48,18 +48,14 @@ $stmt = $db->prepare("INSERT INTO uploads (title, artist_name, file) VALUES ( ?,
 $stmt->execute(array( $_POST['title'], $_POST['artist'], $_FILES['file']['name']));
 $id = $db->LastInsertId();
 
- if(move_uploaded_file($_FILES['file']['tmp_name'], $target)) 
- { 
- 
- //Tells you if it is all ok 
-?><h1><? echo "Thank you for your submission"; ?></h1><?
+ if (move_uploaded_file($_FILES['file']['tmp_name'], $target)) {
 
- } 
- else { 
- 
- //Gives an error if it is not ok 
- echo "Sorry, there was a problem uploading your file."; 
- } 
+ //Tells you if it is all ok?><h1><?php echo "Thank you for your submission"; ?></h1><?php
+ } else {
+
+ //Gives an error if it is not ok
+     echo "Sorry, there was a problem uploading your file.";
+ }
 
 // echo $_FILES['file']['tmp_name'];
 
@@ -86,4 +82,3 @@ echo "<pre>";
 <button type="button" name="button" onclick="location.href='index.html'" >Go Back</button>
 
 </div>
-
