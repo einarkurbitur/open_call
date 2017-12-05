@@ -19,6 +19,7 @@ pre {
 
 h1,h2{
   color: rgb(231,231,231);
+  font-weight: 500;
 
 }
 a{
@@ -40,8 +41,11 @@ button{
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 5px;
-
 }
+
+
+
+
 button:hover{
   background-color: rgb(205,205,205);
   color: rgb(27,27,27);
@@ -131,6 +135,7 @@ input[type=submit]{
 .header-text
 {
     width: 80%;
+    max-width: 600px;
     padding: 10px;
     font-family: 'Calibri', sans-serif;
 }
@@ -182,10 +187,19 @@ input[type=submit]{
     top: 9px;
     right: 10px;
 
+
     width: 200px;
     height: 200px;
     padding: 20px;
 
+    border-radius: 4px;
+    position: fixed;
+/*    margin-right: 10px;
+*/
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    text-align: right;
     /*display: flex;
     flex-direction: column;*/
     /*justify-content: center;*/
@@ -202,7 +216,6 @@ input[type=submit]{
     position: fixed;
     top: 9px;
     left: 10px;
-
     width: 200px;
     height: 200px;
     padding: 20px;
