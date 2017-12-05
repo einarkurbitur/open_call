@@ -3,7 +3,7 @@ Net Art:
 	Style input text field
 	Full screen video
 	New screenshot for
-	TYpography width
+	Typography width
 	Text
 	Make SoLewitt action
 	Make Picasso action
@@ -11,4 +11,4 @@ Net Art:
 	Align the submission boxx
 	Gallery on front page
 	See more examples link
-	Submit button detal
+	Submit button detail

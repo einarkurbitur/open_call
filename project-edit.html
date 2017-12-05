@@ -12,43 +12,49 @@
 
 
 	<div class="navigation">
-      <div class="">
-        <button type="button" name="button" onclick="location.href='index.html'" style="">Home</button>
-      </div>
+		<div class="">
+			<button type="button" name="button" onclick="location.href='index.html'" style="">Home</button>
+		</div>
 
-      <div class="">
-        <button type="button" name="button" onclick="location.href='gallery.html'" style="">Gallery</button>
-      </div>
+		<div class="">
+			<button type="button" name="button" onclick="location.href='gallery.html'" style="">Gallery</button>
+		</div>
 
-			<div class="">
-				<button type="button" name="button" onclick="location.href='tutorial.html'" style="">How to create an action</button>
-			</div>
-  </div>
+		<div class="">
+			<button type="button" name="button" onclick="location.href='tutorial.html'" style="">How to create an action</button>
+		</div>
+	</div>
 
 	<div class="header-container">
 		<h1>Submit your action</h1>
 
-	<form action="project-save.php" method="post" enctype="multipart/form-data">
- 	
-
-
- 			<label color>Title</label>
-<br>
- 				<input id="text" type="text" name="title" value=""></input>
-<br><br>
- 			<label color>Artist Name</label>
-<br>
- 				<input id="project-descr" name="artist"></input>
-<br><br>
+		<form action="project-save.php" method="post" enctype="multipart/form-data">
 
 
 
-			<input type="file" name="file" id="file_upload">
-			<label for="file_upload" class="uploader">Choose file</label>  
-			<input type="submit" value="Submit">   
-	<br><br><br><br><br><br>
+			<label color>Title</label>
+			<br>
+			<input id="text" type="text" name="title" value=""></input>
+			<br><br>
+			<label color>Artist Name</label>
+			<br>
+			<input id="project-descr" type="text" name="artist"></input>
+			<br><br>
 
-	</form>
+
+
+			<!-- <input type="file" name="file" id="file_upload" class="inputfile"> -->
+			<!-- <label for="file_upload" class="uploader">Choose file</label> -->
+			<input type="file" name="file" id="file_upload" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+			<label for="file_upload" class="uploader"> <span>Choose a file&hellip;</span></label>
+			<input type="submit" value="Submit">
+			<br><br><br><br><br><br>
+
+			<div class="box">
+
+	    </div>
+	    <script src="js/custom-file-input.js"></script>
+		</form>
 
 	</div>
 
@@ -59,5 +65,3 @@
 </body>
 
 </html>
-
-
