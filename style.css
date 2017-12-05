@@ -1,4 +1,6 @@
-html,
+html {
+    background-color: rgb(27,27,27);
+}
 body
 {
     font-family: 'Calibri', sans-serif;
@@ -8,6 +10,13 @@ body
     background-color: rgb(27,27,27);
     color: rgb(153,153,153)
 }
+
+pre {
+/*  display: flex;*/
+  text-align: left;
+
+}
+
 h1,h2{
   color: rgb(231,231,231);
 
@@ -37,6 +46,8 @@ button:hover{
   background-color: rgb(205,205,205);
   color: rgb(27,27,27);
 }
+
+
 .uploader{
   font-family: 'Calibri', sans-serif;
   font-size: 14px;
@@ -75,7 +86,6 @@ input[type=submit]{
     width: 60%;
     margin-bottom: 5%;
     margin-left: 20%;
-    padding-top: 20px;
     padding-bottom: 20px;
 
     /*border-style: outset;*/
@@ -100,6 +110,7 @@ input[type=submit]{
     align-items: center;
 }
 
+
 .image
 {
     width: 80%;
@@ -121,7 +132,10 @@ input[type=submit]{
 {
     width: 80%;
     padding: 10px;
+    font-family: 'Calibri', sans-serif;
 }
+
+
 
 .project-by
 {
@@ -225,3 +239,5 @@ input[type=submit]{
     border-radius: 10px;
     background-color: rgb(71,71,71)
 }
+
+
