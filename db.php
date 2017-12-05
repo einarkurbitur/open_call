@@ -5,19 +5,19 @@
 /*** DATABASE INFO ***/
 
 //localhost
-$host = 'localhost';
-$db   = 'psaction';
-$user = 'root';
-$pass = 'root';
-$charset = 'utf8';
+// $host = 'localhost';
+// $db   = 'psaction';
+// $user = 'root';
+// $pass = 'root';
+// $charset = 'utf8';
 
 
 //website psaction.club
-// $host = 'localhost';
-// $db   = 'u9734d22250_psaction';
-// $user = 'u9734d22250_psaction';
-// $pass = 'ITFnmStC';
-// $charset = 'utf8';
+$host = 'localhost';
+$db   = 'u9734d22250_psaction';
+$user = 'u9734d22250_psaction';
+$pass = 'ITFnmStC';
+$charset = 'utf8';
 
 
 
