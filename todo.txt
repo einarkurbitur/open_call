@@ -1,0 +1,14 @@
+Net Art:
+	Less bold
+	Style input text field
+	Full screen video
+	New screenshot for
+	TYpography width
+	Text
+	Make SoLewitt action
+	Make Picasso action
+	Make more actions
+	Align the submission boxx
+	Gallery on front page
+	See more examples link
+	Submit button detal
