@@ -27,6 +27,11 @@ a .image {
   width: 100%;
 }
 
+a .gallery_title {
+  width: 100%;
+  
+}
+
 .iframe {
     width: 600px;
     height: 400px;
