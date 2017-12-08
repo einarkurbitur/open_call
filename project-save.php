@@ -1,6 +1,9 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-
+<link rel="icon" href="https://cdn.worldvectorlogo.com/logos/photoshop-cc.svg">
+    <head>
+        <title>Action Club</title>
+    </head>
 
 <?php
 
